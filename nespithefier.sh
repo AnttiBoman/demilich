@@ -51,5 +51,6 @@ while IFS= read -r line ; do
             fi
         fi
     done
-    echo $final
+    final=${final,,}
+    echo ${final^} 
 done < "${1:-/dev/stdin}"
